@@ -1,4 +1,6 @@
 .PHONY: test
+.DEFAULT_GOAL := test
+
 
 deps:
 	pip install -r requirements.txt
