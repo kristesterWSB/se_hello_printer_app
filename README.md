@@ -56,13 +56,12 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
   # miejsce na twoje notatki
   Aby skorzysztać z TravisCI trzeba przygotowac plik .travis.yml
-  
-  language: python
-install:
- - make deps
-script:
- - make lint
- - make test
+    language: python
+  install:
+  - make deps
+  script:
+  - make lint
+  - make test
   ```
 
 # Pomocnicze
