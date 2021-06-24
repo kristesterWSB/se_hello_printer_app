@@ -28,4 +28,4 @@ class FlaskrTestCase(unittest.TestCase):
     def test_outputs_content(self):
         rv = self.app.get('/outputs')
         s = str(rv.data)
-        self.assertIn('xml', s)
+        self.assertIn('xml', s) #jakis komentarz
