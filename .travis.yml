@@ -10,5 +10,5 @@ script:
  - make docker_push
 deploy:
   provider: heroku
-  app: agile-plains-76182
+  app: projektwsb
   api_key: ${HEROKU_API_KEY}
