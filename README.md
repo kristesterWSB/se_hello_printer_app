@@ -187,7 +187,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     # zauważ, możesz skalować instancje swojej aplikacji
      $ heroku ps:scale web=0
-    $ heroku ps:scale web=1
+     $ heroku ps:scale web=1
 ## Deployment do heroku z TravisCI
 
 Dodaj na końcu .travis.yml, nazwę aplikacji znajdź w
@@ -206,4 +206,5 @@ $ heroku auth:token
 Aplikacja monitorowana na serwisie statuscake.com
 https://app.statuscake.com/YourStatus2.php
 ## badge
-[![Build Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=1)
+![Monitor Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=1)
+![Build Status Travis_CI](https://travis-ci.com/kristesterWSB/se_hello_printer_app.svg?branch=master&status=passed)
