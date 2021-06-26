@@ -99,18 +99,21 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   $ pip install -r requirements.txt
   ```
     Sprawdź czy requirements.txt się zgadza:
-      ```$ cat requirements.txt
+      ```
+      $ cat requirements.txt
       ```
       flask
       gunicorn
 
 2. Przetestuj działanie:  
    w jednym oknie terminala
-  ```$ PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
-```
+  ```
+  $ PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
+  ```
   w drugim oknie terminala
-  ```$ curl 127.0.0.1:8000
-```
+  ```
+  $ curl 127.0.0.1:8000
+  ```
 3. Stwórz plik Procfile z jedną linią:
   web: gunicorn hello_world:app
 
@@ -127,22 +130,22 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```  
   $ echo 'gunicorn' >> requirements.txt
   $ pip install -r requirements.txt
-```
+  ```
       Sprawdź czy requirements.txt się zgadza:
   ```      
   $ cat requirements.txt
         flask
         gunicorn
-````
+  ```
   2. Przetestuj działanie:  
      w jednym oknie terminala
     ```
     $ PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
-```
+    ```
      w drugim oknie terminala
-  ```
+    ```
     $ curl 127.0.0.1:8000
-```
+    ```
   3. Stwórz plik Procfile z jedną linią:
     web: gunicorn hello_world:app
 
@@ -165,28 +168,28 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   https://devcenter.heroku.com/articles/heroku-cli   
   6. Przetestuj plik Procfile z pomocą heroku-cli:
      w jednym oknie terminala   
-  ```
+    ```
     $ heroku local
-```
+    ```
      w drugim oknie terminala
-  ```
+    ```
     $ curl 127.0.0.1:5000
-```
+    ```
   7. Umieśćmy aplikację na platformie Heroku:
 
   ```  
   $ heroku login -i
-```
+  ```
      create the app at the heroku side
   ```  
   $ heroku create
-```
+  ```
      aplikacja pojawi się w heroku dashboard (przeglądarka internetowa)
 
      heroku działa używając git-a:
   ```  
   $ git remote -v
-```
+  ```
      deploy
 ```    
 $ git push heroku master
