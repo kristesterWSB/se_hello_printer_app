@@ -124,20 +124,24 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   0. Załóż konto na heroku.com
   1. Dodaj gunicorn do twojego pliku requirements.txt:
      aktywuj wcześniej wirtualne środowisko
-  ```  $ echo 'gunicorn' >> requirements.txt
-    $ pip install -r requirements.txt
+  ```  
+  $ echo 'gunicorn' >> requirements.txt
+  $ pip install -r requirements.txt
 ```
       Sprawdź czy requirements.txt się zgadza:
-  ```      $ cat requirements.txt
+  ```      
+  $ cat requirements.txt
         flask
         gunicorn
 ````
   2. Przetestuj działanie:  
      w jednym oknie terminala
-    ```$ PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
+    ```
+    $ PYTHONPATH=$PYTHONPATH:$(pwd) gunicorn hello_world:app
 ```
      w drugim oknie terminala
-  ```  $ curl 127.0.0.1:8000
+  ```
+    $ curl 127.0.0.1:8000
 ```
   3. Stwórz plik Procfile z jedną linią:
     web: gunicorn hello_world:app
@@ -147,11 +151,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   plik runtime.txt (sprawdź koniecznie na: https://devcenter.heroku.com/articles/python-runtimes#supported-
   python-runtimes):
 
-  ```$ touch runtime.txt
+  ```
+  $ touch runtime.txt
 ```
    dodaj python-3.6.10
 
-  ```$ cat runtime.txt
+  ```
+  $ cat runtime.txt
 ```
     python-3.6.10
 
@@ -159,25 +165,31 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   https://devcenter.heroku.com/articles/heroku-cli   
   6. Przetestuj plik Procfile z pomocą heroku-cli:
      w jednym oknie terminala   
-  ```  $ heroku local
+  ```
+    $ heroku local
 ```
      w drugim oknie terminala
-  ```  $ curl 127.0.0.1:5000
+  ```
+    $ curl 127.0.0.1:5000
 ```
   7. Umieśćmy aplikację na platformie Heroku:
 
-  ```  $ heroku login -i
+  ```  
+  $ heroku login -i
 ```
      create the app at the heroku side
-  ```  $ heroku create
+  ```  
+  $ heroku create
 ```
      aplikacja pojawi się w heroku dashboard (przeglądarka internetowa)
 
      heroku działa używając git-a:
-  ```  $ git remote -v
+  ```  
+  $ git remote -v
 ```
      deploy
-```    $ git push heroku master
+```    
+$ git push heroku master
 ```
      see from the log, what the url of your app is
 
@@ -188,14 +200,16 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
      otwórz URL Twojej aplikacji w przeglądarce internetowej
 
      zauważ, możesz skalować instancje swojej aplikacji
-  ```   $ heroku ps:scale web=0
-     $ heroku ps:scale web=1
+```
+$ heroku ps:scale web=0
+$ heroku ps:scale web=1
 ```
 ## Deployment do heroku z TravisCI
 
 Dodaj na końcu .travis.yml, nazwę aplikacji znajdź w
 dashboardzie heroku:
- ```deploy:
+ ```
+ deploy:
      provider: heroku
      app: NAZWA TWOJEJ APLIKACJI
    api_key: ${HEROKU_API_KEY}
@@ -203,11 +217,12 @@ dashboardzie heroku:
 3.  W zakładce settings na travis-ci.com, dodaj zmienną HEROKU_API_KEY,  klucz możemy pobrać w
 konsoli za pomocą:
 
-```$ heroku auth:token
+```
+$ heroku auth:token
 ```
 ## Monitoring
 Aplikacja monitorowana na serwisie statuscake.com
 https://app.statuscake.com/YourStatus2.php
 ## badge
-![Monitor Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=1)
+![Monitor Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=5)
 ![Build Status Travis_CI](https://travis-ci.com/kristesterWSB/se_hello_printer_app.svg?branch=master&status=passed)
