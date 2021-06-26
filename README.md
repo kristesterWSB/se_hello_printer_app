@@ -205,3 +205,5 @@ $ heroku auth:token
 ## Monitoring
 Aplikacja monitorowana na serwisie statuscake.com
 https://app.statuscake.com/YourStatus2.php
+## badge
+[![Build Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=1)
