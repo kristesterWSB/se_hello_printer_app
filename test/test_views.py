@@ -23,9 +23,10 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output_xml(self):
         rv = self.app.get('/?output=xml')
-        self.assertEqual(b'<greetings><name>Krzysztof</name><msg>Hello World!</msg></greetings>', rv.data) #noqa
+        self.assertEqual(b'<greetings><name>Krzysztof</name><msg>Hello \
+        World!</msg></greetings>', rv.data)  # noqa
 
     def test_outputs_content(self):
         rv = self.app.get('/outputs')
         s = str(rv.data)
-        self.assertIn('xml', s) #jakis komentarz
+        self.assertIn('xml', s)
