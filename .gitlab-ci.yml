@@ -5,12 +5,13 @@ test:
   image: "python:3"
   stage: test
   script:
-  - apk add --update make
-  - make docker_build
+    - make deps
+    - make test
 docker:
   image: docker:stable
   services:
     - docker:dind
   stage: docker_build
   script:
-  - docker build -t myapp .
+    - apk add --update make
+    - make docker_build
