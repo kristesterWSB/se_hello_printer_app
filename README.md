@@ -229,3 +229,12 @@ https://app.statuscake.com/YourStatus2.php
 ## badge
 ![Monitor Status StatusCake](https://app.statuscake.com/button/index.php?Track=6012045&Days=1&Design=5)
 ![Build Status Travis_CI](https://travis-ci.com/kristesterWSB/se_hello_printer_app.svg?branch=master&status=passed)
+
+
+## cwiczenie git branch
+jak git status dla branchy
+$ git branch
+
+tworzenie nowego brancha
+$ git checkout -b 'nazwa brancha'
+$ git branch
